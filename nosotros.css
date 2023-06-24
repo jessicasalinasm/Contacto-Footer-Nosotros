@@ -3,87 +3,97 @@
 /*Cuerpo de la página, incluyendo texto y background*/
 
 body {
-    background-image: url("imagenes/decoracionlarga.png");
+    /**background-image: url("imagenesfooter/decoracionlarga.png");
     background-repeat: no-repeat;
-    background-position: top right;
+    background-position: top right;**/
     width: 98%;
-    padding: 5vh;
+    margin: auto;
+    /*Esto es para que los patrones de decoración y la columna central queden en una misma línea*/
+    display: flex;
+    justify-content: space-between;
+    height: 210vh;
 }
 
 
-/*Texto de la página más video*/
+/*Imágenes de decoración a los costados*/
 
-.izquierdo-nosotros {
+
+/*Formato de las cajas que contienen las imágenes de los costados*/
+
+.decoracion-nosotros {
+    overflow: hidden;
+}
+
+
+/*Formato de imágenes*/
+
+.decoracion-nosotros img {
+    opacity: 0.3;
+    width: 30vh;
+}
+
+
+/*Patrón izquierdo position:fixed*/
+
+
+/*
+#nosotros-patronizquierdo {
+    position: fixed;
+    top: 0;
+    z-index: -1;
+    left: 0;
+}
+*/
+
+
+/*Patrón derecho position:fixed*/
+
+
+/*
+#nosotros-patronderecho {
+    position: fixed;
+    top: 0;
+    z-index: -1;
+    right: 0;
+}
+*/
+
+
+/*****Texto de la página más video*****/
+
+
+/*Columna central*/
+
+.centro-nosotros {
     display: flex;
     flex-direction: column;
-    width: 1000px;
-    margin-left: 20vh;
+    width: 140vh;
+    margin: auto;
 }
 
 
-/*Slider o carrusel de fotos*/
+/*Cuadro de Fotos de nosotros*/
 
-.contenedor-slidernos {
-    width: 400px;
-    margin: 0 auto;
-    overflow: hidden;
-    position: relative;
-}
-
-.slidernos {
+.imgnos {
     display: flex;
-    margin-top: 3%;
+    flex-direction: row;
+    gap: 5vh;
+    justify-content: center;
 }
 
-.slider-section-nosotros {
-    width: 100%;
-}
 
-.slider-in {
-    display: flex;
-    margin-left: -100%;
-    object-fit: contain;
-}
+/*Fotos*/
 
-.slider-btn {
-    position: absolute;
-    overflow: visible;
-    top: 50%;
-    transform: translate(-50%, -50%);
-    text-decoration: none;
-    border-radius: 50%;
-    border: none;
-    width: 40px;
-    height: 40px;
-    background-color: rgba(255, 255, 255, 0.4);
-    cursor: pointer;
-    transition: all 2.5s;
-}
-
-.slider-btn:hover {
-    background-color: #fff;
-}
-
-.slider-btn-right {
-    right: 10px;
-}
-
-.slider-btn-left {
-    left: 10px;
-}
-
-.slider-btn-right::before {
-    content: url(imagenes/arrow-right-svgrepo-com.svg);
-}
-
-.slider-btn-left::before {
-    content: url(imagenes/arrow-left-svgrepo-com.svg);
+.img-section-nosotros img {
+    border: 2px dashed #E6B74F;
+    ;
+    padding: 7px;
 }
 
 
 /*Formato de Títulos*/
 
-.izquierdo-nosotros h1 {
+.centro-nosotros h1 {
     font-family: "Bebas Neue";
     color: #E6B74F;
     font-size: 50px;
@@ -91,7 +101,7 @@ body {
     padding-left: 10vh
 }
 
-.izquierdo-nosotros h2 {
+.centro-nosotros h2 {
     font-family: "Bebas Neue";
     line-height: 0%;
     color: #E6B74F;
@@ -115,5 +125,5 @@ p {
 
 .video-nosotros {
     text-align: center;
-    margin: auto 5vh;
+    margin: 0 auto;
 }
