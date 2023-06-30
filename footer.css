@@ -247,9 +247,9 @@
 /*Fuente p de pie de página*/
 
 .pie-pagina .grupo-1 .box-footer p {
-    margin-bottom: 2vh;
+    margin-bottom:auto;
     font-size: 3vh;
-    line-height: 2vh;
+    line-height: 0.5vh;
 }
 
 
@@ -263,12 +263,17 @@
 
 /*Fuente de los enlaces de pie de página*/
 
-#links a {
+#linksfooter a {
     color: #FFFFFF;
     text-align: center;
     font-size: 2.5vh;
     margin: 0 1vh;
     line-height: 5vh;
+}
+
+/*hover de los links*/
+#linksfooter a:hover{
+    color:#52A5A0;
 }
 
 
@@ -305,10 +310,10 @@
 
 
 /*Fuente de grupo 2 pie de página*/
-
+/*
 .pie-pagina .grupo-2 small {
     font-size: 2vh;
-}
+}*/
 
 
 /*Hover para cada botón del pie de página*/
